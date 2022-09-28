@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+        
+            "type":"cppdbg",
+            "name": "debug foo",
+            "program": "/home/ws/src/code/dbs/show-dwarf/foo",
+            "request": "launch",
+            "cwd": ".",
+            "debugServerArgs": "-s foo.debug"
+        },
+        {
+        
+            "type":"cppdbg",
+            "name": "debug foo.g.strip-all.with-debug-link",
+            "program": "/home/ws/src/code/dbs/show-dwarf/foo.g.strip-all.with-debug-link",
+            "request": "launch",
+            "cwd": "."
+        }
+
+    ]
+}
