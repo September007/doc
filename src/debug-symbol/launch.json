@@ -20,7 +20,14 @@
             "symbolLoadInfo": {
                 "loadAll": true,
                 "exceptionList": ""
-            }
+            },
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
         },
         {
             "type": "cppdbg",
