@@ -24,6 +24,7 @@ https://download.qt.io/official_releases/qt/6.4/6.4.0/single/qt-everywhere-src-6
 
 mkdir build
 cd build
+# 可以忽略prefix，反正cmake --install 可以添加prefix，更多配置项看 configure --help
 ../configure -prefix /usr/local/Qt6
 # 4. build
 cmake --build . -j8
@@ -42,3 +43,10 @@ https://download.qt.io/official_releases/qtcreator/8.0/8.0.1/qt-creator-opensour
 2. goto line57 'Linux and macOS'
 
 qt path就是之前指定的prefix即/usr/local/Qt6
+
+
+
+
+
+## 进阶configure
+../configure  --optimize-debug -linuxfb -xcb -libudev -libinput -xkbcommon  -pulseaudio 
