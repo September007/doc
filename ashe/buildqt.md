@@ -41,4 +41,15 @@ sudo apt update && sudo apt upgrade && sudo apt install -y libfontconfig1-dev  l
 gmake -j16
 gmake install
 
-···
+```
+
+
+# QTCreator
+see its readme
+
+1. download src
+https://download.qt.io/official_releases/qtcreator/8.0/8.0.1/qt-creator-opensource-src-8.0.1.tar.gz
+
+2. goto line57 'Linux and macOS'
+
+qt path指定qt pack路径
