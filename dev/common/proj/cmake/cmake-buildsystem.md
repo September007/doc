@@ -43,5 +43,45 @@ g++ test.cpp -Iinclude -lstdc++ -o tests
 ```cmake
 message("this message call print var of project name :${PROJECT_MAME}")
 ```
-## 打印什么？
-打印变量？，自然是要打印变量，但问题
+### 打印什么？
+打印变量？，自然是要打印变量，但问题是哪些变量
+
+cmake可以选择 generator，
+```bash
+lull@DESKTOP-TUB0OQU:/mnt/e/CODE/doc/dev/common/proj/cmake/test$ cmake --help |grep generator
+  -G <generator-name>          = Specify a build system generator.
+  KDevelop3 - Unix Makefiles   = Generates KDevelop 3 project files.
+```
+我们选择生成器 为 Unix MakeFiles 时，cmake 的configure阶段会生成makefile，瞅瞅这些makfile对于理解cmake有益处
+
+参照 makefile的目标的结构，我们主要关注三种属性
+|name|kind|specificition|
+|---|---|---|
+|*INCLUDE_DIRECTORIES|DC | 文件的查找路径 |
+|*LINK_LIBRARIES  | C |  链接的对象，如静态库  |
+|COMPILE_OPTIONS|C| 编译选项|
+|COMPILE_DEFINITIONS|C  |编译预定义宏   |
+|*OUTPUT_DIRECTORY  |C  |输出目录   |
+
+以上几乎就是所有需要被关注的属性，[属性文档](https://cmake.org/cmake/help/latest/manual/cmake-properties.7.html)，kind是说种类：C：构建指令，D：依赖
+更多私人的理解仿佛无根之萍的猜测，便不先拿出来了。
+
+### 属性的工作原理
+
+你可以在属性文档里查到
+```
+Directories::INCLUDE_DIRECTORIES
+Targets::INCLUDE_DIRECTORIES
+Targets::INTERFACE_INCLUDE_DIRECTORIES
+Targets:SYSTEM_INCLUDE_DIRECTORIES
+Source Files::INCLUDE_DIRECTORIES
+```
+如何工作？ 如下是我的理解
+```bash
+1. 声明目标时，like add_excutable
+    A: 复制Directories::INCLUDE_DIRECTORIES 到当前目标的属性， [INCLUDE_DIRECTORIES](https://cmake.org/cmake/help/v3.25/prop_tgt/INCLUDE_DIRECTORIES.html)
+2. target_include_directories(***)
+    根据调用参数 [SYSTEM] <INTERFACE|PUBLIC|PRIVATE> 追加 dirs 到 INCLUDE_DIRECTORIES | INTERFACE_INCLUDE_DIRECTORIES | INTERFACE_SYSTEM_INCLUDE_DIRECTORIES
+
+
+```
