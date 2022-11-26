@@ -1,0 +1,1 @@
+#define header_in_global_include
