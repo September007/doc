@@ -32,10 +32,10 @@ cmake --install . -prefix pack
 
 ```bash
 # 依赖
-sudo apt update && sudo apt upgrade && sudo apt install -y libfontconfig1-dev  libfreetype6-dev  libx11-dev  libx11-xcb-dev  libxext-dev  libxfixes-dev  libxi-dev  libxrender-dev  libxcb1-dev  libxcb-glx0-dev  libxcb-keysyms1-dev  libxcb-image0-dev  libxcb-shm0-dev  libxcb-icccm4-dev  libxcb-sync0-dev  libxcb-xfixes0-dev  libxcb-shape0-dev  libxcb-randr0-dev  libxcb-render-util0-dev  libxcd-xinerama-dev  libxkbcommon-dev  libxkbcommon-x11-dev
+sudo apt update && sudo apt upgrade && sudo apt install -y libfontconfig1-dev  libfreetype6-dev  libx11-dev  libx11-xcb-dev  libxext-dev  libxfixes-dev  libxi-dev  libxrender-dev  libxcb1-dev  libxcb-glx0-dev  libxcb-keysyms1-dev  libxcb-image0-dev  libxcb-shm0-dev  libxcb-icccm4-dev  libxcb-sync0-dev  libxcb-xfixes0-dev  libxcb-shape0-dev  libxcb-randr0-dev  libxcb-render-util0-dev  libxcb-xinerama0-dev  libxkbcommon-dev  libxkbcommon-x11-dev
 
 # 因为不知道gmake如何指定安装路径，而且我看gmake的makfile里的安装路径都写死了（不知道gmake有没有其他的generator），所以需要在 configure阶段写明 安装路径
-../configure -nomake examples  -nomake tests -opensource  -c++std c++11 -skip qtwebengine -skip qt3d -skip qt3d  -skip qtcharts  -skip qtconnectivity   -skip qtdatavis3d -skip qtdoc  -skip qtnetworkauth -skip qtopcua   -skip qtserialport -skip qtpositioning -skip qtquicktimeline -skip qtquick3d -skip qtremoteobjects   -skip qtsensors -skip qtserialbus -skip qtvirtualkeyboard -skip qtwayland   -skip qtwebchannel -skip qtwebengine -skip qtwebview -skip qtquick3dphysics -skip qtspeech -skip qtlocation   -skip qthttpserver -skip qsb  -skip qtscxml -skip qtmultimedia -xcb -xcb-xlib  -feature-xkbcommon -feature-xkbcommon-x11 -- -DQT_FEATURE_xkbcommon_x11=on \
+../configure -nomake examples  -nomake tests -opensource  -c++std c++11 -skip qtwebengine -skip qt3d -skip qt3d  -skip qtcharts  -skip qtconnectivity   -skip qtdatavis3d -skip qtdoc  -skip qtnetworkauth   -skip qtserialport  -skip qtremoteobjects   -skip qtsensors -skip qtserialbus -skip qtvirtualkeyboard -skip qtwayland   -skip qtwebchannel -skip qtwebengine -skip qtwebview  -skip qtspeech -skip qtlocation    -skip qtscxml -skip qtmultimedia -xcb -xcb-xlib  -feature-xkbcommon  
 -prefix pack
 
 gmake -j16

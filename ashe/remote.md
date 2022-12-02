@@ -35,3 +35,7 @@ Host lull-353546
   User lull
   IdentityFile ~/.ssh/353546/id_rsa
 ```
+
+# download something use ssh link
+scp lull@172.89.89.89:/home/lull/some/path/to/file/not/dir /home/path/to/local/dir
+
