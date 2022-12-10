@@ -35,7 +35,3 @@
 
 
 
-## linux
-
-1. 分区使用gparted
-2. 开机自启    systemctl service *** start
