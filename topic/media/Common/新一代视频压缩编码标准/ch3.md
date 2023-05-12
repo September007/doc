@@ -1,5 +1,7 @@
 ---
-categories: ["新一代视频压缩编码标准","media","book"]
+categories: 
+ - [ "book", "新一代视频压缩编码标准" ]
+ - [ media ]
 title: "Ch3 视频压缩编码的基本原理"
 date: 2023-04-11T17:05:00+08:00
 draft: true

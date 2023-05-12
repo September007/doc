@@ -1,25 +1,32 @@
 ---
-categories: ["media","file format"]
-title: "BMP file format"
+categories:
+  - - media
+    - file format
+title: BMP file format
 date: 2023-03-01T14:06:42+08:00
 draft: false
 include_toc: true
+url-root: bmp
 ---
 
 # BMP file format
 
- *image file 1440x900.bmp* ![1440x900.bmp](../../../asset/media/1440x900.bmp) 
+ *image file 1440x900.bmp* ![1440x900.bmp](1440x900.bmp) 
 ```bash
 -rw-rw-r-- 1 lull lull 3888054 Mar  1 14:08 1440x900.bmp
 -rw-rw-r-- 1 lull lull 3888000 Mar  1 14:08 1440x900.rgb
 ```
+
     3888000 = 1440*900*3
+
 .rgb 是裸rgb数据，在yuvview 指定 BGR8 1440*900 之后可以看到如.bmp一样的正常图像
 
+<br/>
 开始分析 .bmp 文件
 八进制编辑器打开bmp，我们只关注 前54个字节
-| Offset hex | Offset dec |  Size   | Example |                           Purpose                            |
-| :--------: | :--------: | :-----:| :-----: | :----------------------------------------------------------: |
+
+| Offset hex | Offset dec |  Size   | Example | Purpose |
+| :--------: | :--------: | :-----:| :-----: | :--: |
 |     00     |     0       | 2 bytes | 0x42 0x4D| The [header field](https://en.wikipedia.org/wiki/File_format#Magic_number) used to identify the BMP and DIB file is `0x42 0x4D` in [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal), same as `BM` in ASCII. The following entries are possible:BMWindows 3.1x, 95, NT, ... etc.BAOS/2 struct bitmap arrayCIOS/2 struct color iconCPOS/2 const color pointerICOS/2 struct iconPTOS/2 pointer |
 |     02     |     2      | 4 bytes |  0xB6533B(小端序3888054)|              The size of the BMP file in bytes               |
 |     06     |     6      | 2 bytes |  | Reserved; actual value depends on the application that creates the image, if created manually can be 0 |
@@ -30,9 +37,10 @@ include_toc: true
  
  0A处指出的头长度 0x36=54， 这就是这个bmp文件头的长度
  
+ <br/>
  于是我们接着看 Windows Bitmap Header
 
-| Offset (hex) | Offset (dec) | Size (bytes) |      | Windows BITMAPINFOHEADER[[2\]](https://en.wikipedia.org/wiki/BMP_file_format#cite_note-bmp-2) |
+| Offset (hex) | Offset (dec) | Size (bytes) |      | [Windows BITMAPINFOHEADER](https://en.wikipedia.org/wiki/BMP_file_format#cite_note-bmp-2) |
 | :----------: | :----------: | :----------: | ---- | :----------------------------------------------------------: |
 |      0E      |      14      |      4       |  0x28=40    |            the size of this header, in bytes (40)            |
 |      12      |      18      |      4       | 0xA0050000=1440 |         the bitmap width in pixels (signed integer)          |

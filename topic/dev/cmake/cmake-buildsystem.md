@@ -1,4 +1,12 @@
-
+---
+title: cmake 构建系统
+categories: 
+ - [dev]
+ - [cmake]
+date: 2023-03-01T14:06:42+08:00
+draft: false
+include_toc: true
+---
 # cmake 构建系统
 
 [cmake build-system doc](https://cmake.org/cmake/help/latest/manual/cmake-buildsystem.7.html)

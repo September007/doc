@@ -1,5 +1,6 @@
 ---
-categories: ["command"]
+categories: 
+ - [ CLI ]
 title: "Regex"
 date: 2023-02-15T10:01:03+08:00
 draft: false
