@@ -1,8 +1,7 @@
 ---
 title: cmake 构建系统
 categories: 
- - [dev]
- - [cmake]
+ - [ Dev, cmake]
 date: 2023-03-01T14:06:42+08:00
 draft: false
 include_toc: true

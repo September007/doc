@@ -1,6 +1,6 @@
 ---
 categories:
-  - - media
+  - - Media
     - file format
 title: BMP file format
 date: 2023-03-01T14:06:42+08:00

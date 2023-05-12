@@ -1,7 +1,7 @@
 ---
 title: gdb
 category:
-  - dev
+  - [ Dev ]
 draft: true
 typora-root-url: gdb
 date: 2023-05-12 10:51:00

@@ -1,4 +1,12 @@
-
+---
+title: Factory Method
+categories:
+ - [ Books,设计模式-可复用面向对象基础]
+date: 2023-03-01T14:06:42+08:00
+draft: false
+include_toc: true
+url-root: Factory Method
+---
 # Factory Method
  工厂方法指的是 *创建接口类实例的接口*
  工厂方法的核心在于 *将所依赖的接口的实例化延迟到 子类*
