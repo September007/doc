@@ -1,14 +1,13 @@
 ---
-title: x. Sum Up
+title: 创建型 Sum Up
 category:
- - [ Books,设计模式-可复用面向对象基础]
+ - [ Books,设计模式-可复用面向对象基础, 创建型]
 draft: false
 typora-root-url: 'x. Sum Up'
 date: 2023-05-15 23:02:10
 tags:
 ---
 
-## 总结
 ### 1. 实现的Hook
  这几个模式里，或多或少都跟 接口有关，这使得我们可以把一部分工作 委托给子类去实现。
  这一点我们会在后边的 诸如桥模式、模版模式等中再次见到

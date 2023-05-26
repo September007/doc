@@ -73,10 +73,25 @@ extern "C" Type * Instance(){
 
 ```
 
+## Inputs and Outputs
+The output of a C++ function is naturally provided via a return value and sometimes via output parameters (or in/out parameters).
+
+Parameters are either inputs to the function, outputs from the function, or both. Non-optional input parameters should usually be values or const references, while non-optional output and input/output parameters should usually be references (which cannot be null). Generally, use std::optional to represent optional by-value inputs, and use a const pointer when the non-optional form would have used a reference. Use non-const pointers to represent optional outputs and optional input/output parameters.
+
+```cpp
+std::optional<const char *> GetDesc(
+  INPUT int id,INPUT const vector<pair<int,int>> &infos,
+  INOUT error_code & ec, 
+  OUT   int & xxx,
+  OPTIONAL std::optional<int> opt);
+```
 
 ## tips
 * no inline namespace ( only for huge complex project version control )
 *    inline function  ( only for code less then 10 lines )
 * Prefer placing nonmember functions in a namespace; use completely global functions rarely. Do not use a class simply to group static members. Static methods of a class should generally be closely related to instances of the class or the class's static data.
 * Do not define implicit conversions. Use the explicit keyword for conversion operators and single-argument constructors.
+* Structs vs. Classes: Use a struct only for passive objects that carry data; everything else is a class.
+* Declaration Order: Group similar declarations together, placing public parts earlier.
+* Friends： A common use of friend is to have a FooBuilder class be a friend of Foo so that it can construct the inner state of Foo correctly, without exposing this state to the world. 
 * 
