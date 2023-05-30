@@ -1,4 +1,11 @@
-
+---
+title: 制作 win pe
+category:
+  - [Skills, orphan]
+draft: false
+date: 2023-05-25 23:10:25
+tags:
+---
 [doc](https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/boot-to-winpe?view=windows-10)
 
 # 1.下载

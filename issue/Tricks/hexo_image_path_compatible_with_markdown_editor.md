@@ -2,9 +2,9 @@
 title: hexo 图片路径与typora等编辑器的兼容
 category:
   - [Tricks]
-draft: true
+draft: false
 url-root: hexo_image_path_compatible_with_markdown_editor
-date: 2023-05-25 16:10:15
+date: 2023-05-25 23:10:25
 tags:
 ---
 

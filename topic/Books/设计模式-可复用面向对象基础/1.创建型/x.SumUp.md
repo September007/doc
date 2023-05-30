@@ -1,7 +1,7 @@
 ---
 title: 创建型 Sum Up
 category:
- - [ Books,设计模式-可复用面向对象基础, 创建型]
+ - [ Books,设计模式-可复用面向对象基础, 1.创建型]
 draft: false
 typora-root-url: 'x. Sum Up'
 date: 2023-05-15 23:02:10
