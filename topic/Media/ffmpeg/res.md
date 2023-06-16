@@ -2,7 +2,7 @@
 categories: ["resources"]
 title: "Res"
 date: 2023-02-01T22:28:59+08:00
-draft: false
+draft: true
 include_toc: true
 ---
 

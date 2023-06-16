@@ -246,10 +246,10 @@ DT_SWORD dtFontGetMetrics(DT_DTENGINE engine, DT_ID_SWORD font_index, DT_UWORD* 
 * 红色边框 : 由`dtCharDoOutput`::x、y 与 `DT_STYLE_EFFECTS::size_h size_v` 指定的范围，代表了 `font_xbs` 与 `font_ybs` 对应的范围
 * 绿色边框 : 由 字形信息 `extent` 指定的范围, 是字形的边界范围
 
-![output](d_type_demo_out.bmp)
+![output](./DType_Tautorial/d_type_demo_out.bmp)
 
 字体和字形 信息如下
-输出格式 见 [`demo source`](d_type_demo.cpp)
+输出格式 见 [`demo source`](./DType_Tautorial/d_type_demo.cpp)
 ```text
         xybs:  1000 1000        extent:  -994 2930-1050 1810     /usr/share/fonts/opentype/noto/NotoSerifCJK-Light.ttc
 ch: W   advance:     0  880 1045 1000   extent:    13 1037   -7  725     Box:   100  100  100  100

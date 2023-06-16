@@ -19,4 +19,7 @@
 2. 查找 issue
 
 * issue
+* * debug-symbol
 * * linux
+* * Plan
+* * Tr

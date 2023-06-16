@@ -1,7 +1,7 @@
 ---
 title: Code Style
 category:
-  - uncategorized
+ - ["Dev","cpp"]
 draft: false
 typora-root-url: Code Style
 date: 2023-05-18 21:31:55
