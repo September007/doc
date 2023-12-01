@@ -3,7 +3,7 @@ title: DType Super Tautorial (DType Standard Engine)
 category:
   - [Dev,DType]
 draft: false
-typora-root-url: DType Super Tautorial
+url-root: DType_Tautorial
 date: 2023-05-19 17:38:36
 tags:
 ---
