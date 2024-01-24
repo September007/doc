@@ -1,0 +1,24 @@
+# X410 WSL2 Helper
+# https://x410.dev/cookbook/#wsl
+# --------------------
+# Setting up essential environment variables for Ubuntu desktop
+# --------------------
+
+# Ubuntu default desktop (GNOME Shell variant)
+# https://wiki.gnome.org/Projects/GnomeShell
+
+export XDG_CURRENT_DESKTOP=ubuntu:GNOME
+export XDG_SESSION_DESKTOP=ubuntu
+export DESKTOP_SESSION=ubuntu
+export GNOME_SHELL_SESSION_MODE=ubuntu
+
+# Commonly referenced environment variables for X11 sessions
+# https://specifications.freedesktop.org/basedir-spec/latest/
+
+export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+export XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+export XDG_MENU_PREFIX=gnome-
+
+export XDG_SESSION_TYPE=x11
+export XDG_SESSION_CLASS=user
+
