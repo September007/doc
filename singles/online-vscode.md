@@ -1,7 +1,7 @@
 ---
 title: online vscode
 category:
-  - IDE
+  - [Singles]
 draft: false
 url-root: online-vscode
 date: 2023-11-30 22:26:28

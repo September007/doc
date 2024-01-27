@@ -1,7 +1,7 @@
 ---
 title: hexo 图片路径与typora等编辑器的兼容
 category:
-  - [Tricks]
+  - [Singles]
 draft: false
 url-root: hexo_image_path_compatible_with_markdown_editor
 date: 2023-05-25 23:10:25

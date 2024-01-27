@@ -1,7 +1,7 @@
 ---
+title: "Hugo + nginx + domain: this doc server"
 categories: 
   - [Singles]
-title: "Hugo + nginx + domain: this doc server"
 date: 2023-01-29T11:57:48+08:00
 draft: false
 include_toc: true
