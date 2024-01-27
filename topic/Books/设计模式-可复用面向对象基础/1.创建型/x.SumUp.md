@@ -1,7 +1,7 @@
 ---
-title: 1.创建型总结
+title: 1.x.创建型总结
 category:
- - [ Books,设计模式-可复用面向对象基础, 创建型]
+ - [ Books, 设计模式-可复用面向对象基础, 1.创建型]
 draft: false
 date: 2023-05-15 23:02:10
 tags:
