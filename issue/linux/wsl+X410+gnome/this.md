@@ -14,7 +14,7 @@ gui(){
 
 ```bash
 # copy files
-echo "xxxx"|sudo -Svp ""
+echo "nuhc"|sudo -Svp ""
 
 cp .bash_sysinit .bash_ubuntu_desktop ~
 cp start-desktop.sh start-from-wsl-cmd.bash ~/bin
