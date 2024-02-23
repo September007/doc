@@ -2,7 +2,7 @@
 title: DCT
 categories:
  - [ Topics, H264]
-date: 2023-03-01T14:06:42+08:00
+date: 2024-1-29T00:35:00+08:00
 draft: false
 include_toc: true
 url-root: DCT
@@ -55,7 +55,7 @@ $$
 
 #### 可视化频域
 
-![DCT](DCT/visual_DCT.png)
+![DCT](./DCT/visual_DCT.png)
 
 [*code which gen this*](https://dsp.stackexchange.com/questions/58636/what-are-the-cosine-functions-in-jpegs-dct-ii-table)
 ```python
