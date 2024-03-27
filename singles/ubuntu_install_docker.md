@@ -2,7 +2,7 @@
 title: ubuntu install docker
 category:
   - [Singles]
-draft: true
+draft: false
 url-root: ubuntu_install_docker
 date: 2024-03-27 23:43:18
 tags:
