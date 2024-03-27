@@ -103,7 +103,10 @@ OK, finally.
 #define FOREACH9(it_operator, pps, _1, ...) IDx(it_operator(pps, _1) FOREACH8(it_operator, pps, __VA_ARGS__))
 #define FOREACH10(it_operator, pps, _1, ...) IDx(it_operator(pps, _1) FOREACH9(it_operator, pps, __VA_ARGS__))
 #define FOREACH11(it_operator, pps, _1, ...) IDx(it_operator(pps, _1) FOREACH10(it_operator, pps, __VA_ARGS__))
-
+#define FOREACH(pps, ...)           \
+    ID(__Choose30th(__VA_ARGS__,    \
+FOREACH28, FOREACH27, FOREACH26, FOREACH25, FOREACH24, FOREACH23, FOREACH22, FOREACH21, FOREACH20, FOREACH19, FOREACH18, FOREACH17, FOREACH16, FOREACH15, FOREACH14, FOREACH13, FOREACH12, FOREACH11, FOREACH10, FOREACH9, FOREACH8, FOREACH7, FOREACH6, FOREACH5, FOREACH4, FOREACH3, FOREACH2, FOREACH1,                     FOREACH0))                                                                                         \
+    IDx((pps, __VA_ARGS__))
 ```
 
 ## Use Case
